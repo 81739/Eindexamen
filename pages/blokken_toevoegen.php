@@ -22,7 +22,7 @@ require 'session.php';
 	
     <h1>Blokken aanpassen</h1>
  <?php
-                echo "<p><a href='blokken.php'>blokken toevoegen</a></p>";
+                echo "<p><a href='blokken.phpÍ'>blokken toevoegen</a></p>";
 
 	     require ('config.inc.php');
 	     $query = "SELECT * FROM blokken";
