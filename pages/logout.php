@@ -1,1 +1,9 @@
-<?php session_start(); session_destroy(); header("location:login.php") ?>
+<?php
+// sessie starten 
+session_start();
+
+// sessie vernietigen
+session_destroy();
+
+// doorverwijzen naar
+header("location:login.php") ?>

@@ -20,7 +20,7 @@ require 'session.php';
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 </head>
-<body id="top" style="background-color:white;">
+<body>
 
 <?php
 echo "<p><a href='blokken.php'>blokken</a></p>";
@@ -32,8 +32,10 @@ unset($_SESSION['message']);
 <h1>De Klapschaats</h1>
 
 <?php
+// ID krijgen via de url
+$blockID = $_GET['id'];
 // Haal data op
-$sql = "SELECT * FROM profiles";
+$sql = "SELECT * FROM profiles WHERE blockID = '$blockID'";
 $result = mysqli_query($db, $sql);
 
 if (mysqli_num_rows($result) > 0)
